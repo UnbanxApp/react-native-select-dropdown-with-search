@@ -1,19 +1,19 @@
-# react-native-select-dropdown
+# npm i react-native-select-dropdown-with-search
 
-react-native-select-dropdown is a highly customized dropdown | select | picker | menu for react native that works for andriod and iOS platforms.
+npm i react-native-select-dropdown-with-search is a highly customized dropdown | select | picker | menu for react native that works for andriod and iOS platforms.
 
 ## Installation
 
 #### # Using npm
 
 ```bash
-npm install react-native-select-dropdown
+npm install npm i react-native-select-dropdown-with-search
 ```
 
 #### # Using yarn
 
 ```bash
-yarn add react-native-select-dropdown
+yarn add npm i react-native-select-dropdown-with-search
 ```
 
 ## Demo
@@ -26,7 +26,7 @@ yarn add react-native-select-dropdown
 ## Usage
 
 ```
-import SelectDropdown from 'react-native-select-dropdown'
+import SelectDropdown from 'npm i react-native-select-dropdown-with-search'
 ...
 const countries = ["Egypt", "Canada", "Australia", "Ireland"]
 ...
@@ -340,7 +340,7 @@ function recieves item and its index, this function should return React componen
 
 | Method            | Description                                                                                                                                                 |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `reset()`         | Remove selection & reset it to display `defaultButtonText` check https://github.com/AdelRedaa97/react-native-select-dropdown/pull/1#issuecomment-818307624. |
+| `reset()`         | Remove selection & reset it to display `defaultButtonText` check https://github.com/AdelRedaa97/npm i react-native-select-dropdown-with-search/pull/1#issuecomment-818307624. |
 | `openDropdown()`  | Open the dropdown.                                                                                                                                          |
 | `closeDropdown()` | Close the dropdown.                                                                                                                                         |
 
