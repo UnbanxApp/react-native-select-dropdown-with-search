@@ -8,7 +8,7 @@ const {height} = Dimensions.get('window');
 
 
 
-const SelectDropdown = (
+const SelectDropdownWithSeearch = (
   {
     data /* array */,
     onSelect /* function  */,
@@ -307,4 +307,4 @@ const SelectDropdown = (
   );
 };
 
-export default forwardRef((props, ref) => SelectDropdown(props, ref));
+export default forwardRef((props, ref) => SelectDropdownWithSeearch(props, ref));

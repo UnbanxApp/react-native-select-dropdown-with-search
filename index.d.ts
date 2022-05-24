@@ -1,8 +1,8 @@
 import type * as React from "react";
 import { StyleProp, ViewStyle, TextStyle } from "react-native";
 
-declare module "react-native-select-dropdown" {
-  export type SelectDropdownProps = {
+declare module "react-native-select-dropdown-with-search" {
+  export type SelectDropdownWithSearchProps = {
     /**
       * array of data that will be represented in dropdown, can be array of objects
       */
@@ -93,7 +93,7 @@ declare module "react-native-select-dropdown" {
     renderCustomizedRowChild?: (selectedItem: any, index: number) => React.ReactNode;
   };
 
-  export default class SelectDropdown extends React.Component<SelectDropdownProps> {
+  export default class SelectDropdownWithSearch extends React.Component<SelectDropdownWithSearchProps> {
     /**
      * Remove selection & reset it to display defaultButtonText check
      */

@@ -1,6 +1,7 @@
-# npm i react-native-select-dropdown-with-search
+# Select Dropdown with Search
 
-npm i react-native-select-dropdown-with-search is a highly customized dropdown | select | picker | menu for react native that works for andriod and iOS platforms.
+npm i react-native-select-dropdown-with-search is a highly customized dropdown | select | picker | menu with the possibility to search the values.
+It's made for react native that works for andriod and iOS platforms.
 
 ## Installation
 
@@ -26,11 +27,11 @@ yarn add npm i react-native-select-dropdown-with-search
 ## Usage
 
 ```
-import SelectDropdown from 'npm i react-native-select-dropdown-with-search'
+import SelectDropdownWithSearch from 'npm i react-native-select-dropdown-with-search'
 ...
 const countries = ["Egypt", "Canada", "Australia", "Ireland"]
 ...
-<SelectDropdown
+<SelectDropdownWithSearch
 	data={countries}
 	onSelect={(selectedItem, index) => {
 		console.log(selectedItem, index)
