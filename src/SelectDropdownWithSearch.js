@@ -160,13 +160,13 @@ const SelectDropdownWithSeearch = (
         activeOpacity={0.8}
         style={[{...styles.dropdownRow, ...rowStyle}, item == selectedItem ? styles.selectedElement : '']}
         onPress={() => onSelectItem(item, index)}>
-          
+
         {renderCustomizedRowChild ? (
           <View style={styles.dropdownCustomizedRowParent}>{renderCustomizedRowChild(item, index)}</View>
         ) : (
-          <Text 
-              numberOfLines={1} 
-              allowFontScaling={false} 
+          <Text
+              numberOfLines={1}
+              allowFontScaling={false}
               style={ [styles.dropdownRowText, rowTextStyle]}
           >
             {rowTextForSelection ? rowTextForSelection(item, index) : item.toString()}
@@ -178,7 +178,7 @@ const SelectDropdownWithSeearch = (
   const renderDropdown = () => {
 
     let inputColor = "#000000";
-    
+
     return (
       isVisible && (
         <Modal
@@ -219,9 +219,9 @@ const SelectDropdownWithSeearch = (
                 <ActivityIndicator size="small" color={'#999999'} />
               </View>
             ) : (
-              
+
               <View>
-                  
+
                 <View
                     style={{
                       ...styles.inputContainer,
@@ -247,9 +247,18 @@ const SelectDropdownWithSeearch = (
                         let data = [];
                         for (let item of savedItems) {
                           if(typeof(item) === 'object'){
-                            if (item.name.toLowerCase().includes(value.toLowerCase())) {
+
+                            const tmpNameArray = item.name.toLowerCase().split(' ');
+                            let acronymString = '';
+                            let acronymStringWithPoints = '';
+                            for(let nameIndex = 0;nameIndex < tmpNameArray.length;nameIndex++){
+                              acronymString += tmpNameArray[nameIndex][0];
+                              acronymStringWithPoints += tmpNameArray[nameIndex][0]+".";
+                            }
+                            if (acronymString.includes(value.toLowerCase()) || acronymStringWithPoints.includes(value.toLowerCase()) || item.name.toLowerCase().includes(value.toLowerCase())) {
                               data.push(item);
                             }
+
                           }else{
                             if (item.toLowerCase().includes(value.toLowerCase())) {
                               data.push(item);
@@ -293,7 +302,7 @@ const SelectDropdownWithSeearch = (
       {renderDropdown()}
       {renderDropdownIcon && renderDropdownIcon(isVisible)}
       {renderCustomizedButtonChild ? (
-        <View style={styles.dropdownCustomizedButtonParent}>{renderCustomizedButtonChild(selectedItem, index)}aaaa</View>
+        <View style={styles.dropdownCustomizedButtonParent}>{renderCustomizedButtonChild(selectedItem, index)}</View>
       ) : (
         <Text numberOfLines={1} allowFontScaling={false} style={{...styles.dropdownButtonText, ...buttonTextStyle}}>
           {isExist(selectedItem)
